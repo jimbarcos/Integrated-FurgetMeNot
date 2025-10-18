@@ -380,7 +380,7 @@ $serverStartMs = microtime(true)*1000.0;
         <!-- Baseline CNN Top Matches Section -->
         <div class="top-matches-section" style="margin-top:32px;">
             <div class="top-matches-title" style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
-                <span style="font-weight:700;color:#8b4fc1;">Baseline CNN:</span>
+                <span style="font-weight:700;color:#1b4fc1;">Baseline CNN:</span>
                 <div style="display:flex;align-items:center;gap:8px;flex:1;min-width:200px;">
                     <input id="searchBoxBaseline" type="text" placeholder="Search by filename..." 
                         style="flex:1;padding:6px 12px;border:1px solid #c2cee3;border-radius:8px;font-size:0.85rem;color:#223a7b;background:#ffffff;min-width:150px;"
@@ -614,7 +614,7 @@ $serverStartMs = microtime(true)*1000.0;
                 }
                 
                 card.innerHTML = `
-                    <div class="top-match-rank" style="background:linear-gradient(135deg,#8b4fc1,#a567df);">#${m.rank}</div>
+                    <div class="top-match-rank" style="background:linear-gradient(135deg,#1b4fc1,#4E73DF);">#${m.rank}</div>
                     <div class="top-match-image-wrapper">
                         <img src="${imgSrc}" class="top-match-image" alt="Match Image">
                     </div>
@@ -624,11 +624,11 @@ $serverStartMs = microtime(true)*1000.0;
                         <div style="font-size:0.78rem;color:#223a7b;font-weight:600;display:flex;justify-content:space-between;">
                             <span>Match Score</span><span>${score.toFixed(2)}%</span></div>
                         <div style="position:relative;height:8px;border-radius:6px;background:#dfe7f5;overflow:hidden;">
-                            <div style="position:absolute;top:0;left:0;height:100%;width:${progressWidth}%;background:linear-gradient(90deg,#8b4fc1,#a567df);transition:width .4s;"></div>
+                            <div style="position:absolute;top:0;left:0;height:100%;width:${progressWidth}%;background:linear-gradient(90deg,#3867d6,#5b8bff);transition:width .4s;"></div>
                         </div>
                     </div>
-                    <button class="details-btn" data-target="${detailsId}" style="background:#8b4fc1;color:#fff;font-weight:600;border:none;border-radius:18px;padding:6px 16px;font-size:0.85rem;cursor:pointer;margin-top:10px;">View Details</button>
-                    <button class="see-image-btn" data-img="${imgSrc}" data-full="${m.path || ''}" data-name="${fileName}" style="background:#f8faff;color:#8b4fc1;font-weight:600;border:2px solid #8b4fc1;border-radius:18px;padding:6px 16px;font-size:0.85rem;cursor:pointer;margin-top:0px;">See Image</button>
+                    <button class="details-btn" data-target="${detailsId}" style="background:#4E73DF;color:#fff;font-weight:600;border:none;border-radius:18px;padding:6px 16px;font-size:0.85rem;cursor:pointer;margin-top:10px;">View Details</button>
+                    <button class="see-image-btn" data-img="${imgSrc}" data-full="${m.path || ''}" data-name="${fileName}" style="background:#f8faff;color:#4E73DF;font-weight:600;border:2px solid #4E73DF;border-radius:18px;padding:6px 16px;font-size:0.85rem;cursor:pointer;margin-top:0px;">See Image</button>
                     <div id="${detailsId}" style="display:none;margin-top:10px;font-size:0.68rem;color:#223a7b;background:#f0f4fb;padding:6px 8px;border:1px solid #d3deee;border-radius:8px;word-break:break-all;">
                         <div><b>File:</b> ${fileName}</div>
                         <div><b>Full Path:</b> ${m.path || 'n/a'}</div>
